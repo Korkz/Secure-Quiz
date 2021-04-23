@@ -1,1 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <h1>Question One</h1>
+
+<p>Question One</p>
+
+<form>
+  <input type="radio" id="q1a1" name="q1" value="q1a1">
+  <label for="q1a1">Answer</label><br>
+  <input type="radio" id="q1a2" name="q1" value="q1a2">
+  <label for="q1a2">Answer</label><br>
+  <input type="submit" class="btn btn-info" value="Next Question">
+</form>
+{% endblock %}
 
