@@ -3,12 +3,25 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-  <h1>Home</h1>
+  <h1>Question Five</h1>
 
-<p> This is a quiz. Click the "Quiz Me" button when you are ready.</p>
+<p>Question Five</p>
 
+<form action='/page1' method="post">
+  <input type="radio" id="q5a1" name="q5" value="q5a1">
+  <label for="q5a1">Answer1</label><br>
+  <input type="radio" id="q5a2" name="q5" value="q5a2">
+  <label for="q5a2">Answer2</label><br>
+  <input type="radio" id="q5a3" name="q5" value="q5a3">
+  <label for="q5a3">Answer3</label><br>
+  <input type="radio" id="q5a4" name="q5" value="q5a4">
+  <label for="q5a4">Answer4</label><br>
+  <input type="submit" class="btn btn-info" value="Next Question">
+</form>
+<div id="footer">
+  
+ <a href="/startOver">Start over</a>
 
-<a href="/page1" class="btn btn-info" role="button">Quiz Me!</a>
-
+</div>
 {% endblock %}
 

@@ -24,14 +24,22 @@ def renderPage1():
 
 @app.route('/page2',methods=['GET','POST'])
 def renderPage2():
-    session["firstName"]=request.form['firstName']
-    session["lastName"]=request.form['lastName']
+    session["q1a1"]=request.form['q1a1']
+    #print(session['q1a1'])
     return render_template('page2.html')
 
 @app.route('/page3',methods=['GET','POST'])
 def renderPage3():
-    session["favoriteColor"]=request.form['favoriteColor']
+    #session["favoriteColor"]=request.form['favoriteColor']
     return render_template('page3.html')
+	
+@app.route('/page4',methods=['GET','POST'])
+def renderPage4():
+    return render_template('page4.html')
+	
+@app.route('/page5',methods=['GET','POST'])
+def renderPage5():
+    return render_template('page5.html')
 
 if __name__=="__main__":
     app.run(debug=True)
