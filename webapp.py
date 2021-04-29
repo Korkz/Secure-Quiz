@@ -52,17 +52,37 @@ def renderAnswer():
     correct=0
     if 'q5' not in session:
         session["q5"]=request.form['q5']
+    #---------Question 1----------------
     if session['q1'] == 'q1a2':
-        correct=correct+1
+        score=score+1
+        correct1="Question 1 was correct"
+    if session['q1'] != 'q1a2':
+	correct1="Question 1 was incorrect"
+    #---------Question 2----------------
     if session['q2'] == 'q2a4':
-        correct=correct+1
+        score=score+1
+        correct2="Question 2 was correct"
+    if session['q2'] != 'q2a4':
+	correct2="Question 2 was incorrect"	
+    #---------Question 3----------------
     if session['q3'] == 'q3a1':
-        correct=correct+1
+        score=score+1
+        correct3="Question 3 was correct"
+    if session['q3'] != 'q3a1':
+	correct3="Question 3 was incorrect"
+    #---------Question 4----------------	
     if session['q4'] == 'q4a1':
-        correct=correct+1
+        score=score+1
+        correct4="Question 4 was correct"
+    if session['q4'] != 'q4a1':
+	correct4="Question 4 was incorrect"
+    #---------Question 3----------------
     if session['q5'] == 'q5a3':
-        correct=correct+1
-    return render_template('answer.html', correcttxt = correct)
-
+        score=score+1
+        correct5="Question 5 was correct"
+    if session['q5'] != 'q5a3':
+	correct5="Question 5 was incorrect"
+	
+    return render_template('answer.html', scoretxt = score, correct1txt = correct1, correct2txt = correct2, correct3txt = correct3, correct4txt = correct4, correct5txt = correct5)			   
 if __name__=="__main__":
     app.run(debug=False)
