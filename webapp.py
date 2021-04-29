@@ -49,7 +49,7 @@ def renderPage5():
 
 @app.route('/answer',methods=['GET','POST'])
 def renderAnswer():
-    correct=0
+    score=0
     if 'q5' not in session:
         session["q5"]=request.form['q5']
     #---------Question 1----------------
