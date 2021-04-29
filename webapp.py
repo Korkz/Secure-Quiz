@@ -65,4 +65,4 @@ def renderAnswer():
     return render_template('answer.html', correcttxt = correct)
 
 if __name__=="__main__":
-    app.run(debug=True)
+    app.run(debug=False)
