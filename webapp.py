@@ -57,31 +57,31 @@ def renderAnswer():
         score=score+1
         correct1="Question 1 was correct"
     if session['q1'] != 'q1a2':
-	correct1="Question 1 was incorrect"
+        correct1="Question 1 was incorrect"
     #---------Question 2----------------
     if session['q2'] == 'q2a4':
         score=score+1
         correct2="Question 2 was correct"
     if session['q2'] != 'q2a4':
-	correct2="Question 2 was incorrect"	
+        correct2="Question 2 was incorrect"	
     #---------Question 3----------------
     if session['q3'] == 'q3a1':
         score=score+1
         correct3="Question 3 was correct"
     if session['q3'] != 'q3a1':
-	correct3="Question 3 was incorrect"
+        correct3="Question 3 was incorrect"
     #---------Question 4----------------	
     if session['q4'] == 'q4a1':
         score=score+1
         correct4="Question 4 was correct"
     if session['q4'] != 'q4a1':
-	correct4="Question 4 was incorrect"
+        correct4="Question 4 was incorrect"
     #---------Question 3----------------
     if session['q5'] == 'q5a3':
         score=score+1
         correct5="Question 5 was correct"
     if session['q5'] != 'q5a3':
-	correct5="Question 5 was incorrect"
+        correct5="Question 5 was incorrect"
 	
     return render_template('answer.html', scoretxt = score, correct1txt = correct1, correct2txt = correct2, correct3txt = correct3, correct4txt = correct4, correct5txt = correct5)			   
 if __name__=="__main__":
